@@ -1,0 +1,35 @@
+learning:
+  num_epochs: 2
+  testevery: 1
+  learning_rate_decay: 0.2
+  scheduler_name: MultiStepLR
+  scheduler_step_1: 8
+  scheduler_step_2: 16
+  criterion: BCEWithLogitsLoss
+  optimizer: RAdam
+  learning_rate_exp: -3.341150573224271
+  learning_rate_exp_l: -2.100308185522299
+  weight_decay_rate: -2.886986072962933
+
+data:
+  worker: 0
+  path: Datasets
+  dataset: celeba
+  task: classify
+  batch_size: 32
+  scaler: '01'
+  shuffle_train: True
+  label_indices: [2, 8, 18, 19, 20, 24, 31, 34, 36, 39]  # Chosen indices for label transform
+  # Attractive, Black_hair, Heavy_Makeup, High_Cheekbones, Male, No_Beard, Smiling, Wearing_Earrings, 
+  # Wearing_Lipstick, Young
+  augmentation:
+    - RandomHorizontalFlip
+    
+network:
+  filter_growth_rate: 2
+  dropout_rate: 0.2
+  final_channel: 12
+  activation_function: RReLU
+  initial_out_channels: 32
+  final_layer: "linear"
+  num_blocks: 3

@@ -1,0 +1,35 @@
+learning:
+  num_epochs: 1
+  testevery: 1
+
+data:
+  worker: 0
+  path: Datasets
+  dataset: celeba
+  task: generate # Just for plotting big plots, nothing else and it doens't have default plots that's why
+  batch_size: 128
+  scaler: '01'
+  shuffle_train: True
+  label_indices: [2, 8, 18, 19, 20, 24, 31, 34, 36, 39]  # Chosen indices for label transform
+  # Attractive, Black_hair, Heavy_Makeup, High_Cheekbones, Male, No_Beard, Smiling, Wearing_Earrings, 
+  # Wearing_Lipstick, Young
+  augmentation:
+    - RandomHorizontalFlip
+    
+network_nlrl:
+  filter_growth_rate: 2
+  dropout_rate: 0.2
+  final_channel: 12
+  activation_function: RReLU
+  initial_out_channels: 32
+  final_layer: "nlrl"
+  num_blocks: 3
+
+network_linear:
+  filter_growth_rate: 2
+  dropout_rate: 0.2
+  final_channel: 12
+  activation_function: RReLU
+  initial_out_channels: 32
+  final_layer: "linear"
+  num_blocks: 3
