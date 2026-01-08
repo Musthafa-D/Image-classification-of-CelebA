@@ -5,7 +5,7 @@
 This project implements image classification models on the **CelebA** face attribute dataset using PyTorch.  
 CelebA is a large dataset containing celebrity face images labeled with 40 binary attributes (e.g., smiling, male, eyeglasses).
 
-The objective of this project is to explore deep learning techniques for attribute prediction and image classification using convolutional neural networks (CNNs), in this project we consider only 10 attributes out of 40 for convenience and due to low specs as well.
+The objective of this project is to explore deep learning techniques for attribute prediction and image classification using convolutional neural networks (CNNs) and to evaluate the calssifier and to understand it via model interpretability through various methods such as attributions, metrics, etc., in this project we consider only 10 attributes out of 40 for convenience and due to low specs as well.
 
 ---
 
@@ -25,5 +25,7 @@ The objective of this project is to explore deep learning techniques for attribu
 - Implementing CNN architectures in PyTorch
 - Training & evaluation loops
 - Performance metrics and visualization
+- Interpretability of the trained model.
 
 ---
+
